@@ -1,0 +1,18 @@
+// Change color scheme of the page by clicking 
+document.getElementById('btnColorScheme').addEventListener('click', function (e) {
+    const metaColorScheme = document.getElementsByTagName('meta').namedItem('color-scheme');
+    const theme = this.querySelector('#theme');
+
+    if (metaColorScheme.content === 'dark') {
+        metaColorScheme.content = 'light';
+        theme.style.color = 'snow';
+        this.title = 'Light theme';
+    } else {
+        metaColorScheme.content = 'dark';
+        theme.style.color = 'hsl(180, 50%, 10%)';
+        this.title = 'Dark theme';
+    };
+}, false);
+
+
+
